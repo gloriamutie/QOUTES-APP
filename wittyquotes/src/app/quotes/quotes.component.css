@@ -1,0 +1,21 @@
+.row{
+    text-align:center;
+    font-size:160%;
+    font-family:italic;
+    color:rgb(197, 148, 197);
+
+}
+h1{
+    text-align:center;
+    color:rgb(175, 17, 17);
+    font-family:Italic;
+}
+body{
+    background-color: slategrey;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cla{
+    background-color: blue;
+}

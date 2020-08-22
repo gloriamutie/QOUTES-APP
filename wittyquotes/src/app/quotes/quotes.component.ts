@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{Qoutes} from '../quotes';
+import { Quotes } from "../quote";
 
 @Component({
   selector: 'app-quotes',
@@ -9,28 +9,29 @@ import{Qoutes} from '../quotes';
 export class QuotesComponent implements OnInit {
 
 
-qoutes:Qoutes[]=[
-  new Qoutes("Abraham lincoln", "Whatever you are be a good one", new Date(2012,12,1)),
-  new Qoutes("Albert Einstein", "If you want to live a happy life,tie to a goal,not to people or objects",new Date(2013,11,5)),
-  new Qoutes("Ben Carson", "Uninformed people can be easily manipulated",new Date(2012,12,2)),
-  new Qoutes("Gitonga Miriam","Work hard Untill your Bank Account balance looks like your mobile phone number",new Date(2012,3,2)),
-  new Qoutes("Nick Vijucic","If i fail ,i try again ,and again",new Date(2012,12,1)),
-  new Qoutes("Oprah Winfrey","Think like a Queen .A Queen is not afraid to fail to failure is another steppingstone to greatness",new Date(2012,12,8)),
+quotes:Quotes []=[
+
+  new Quotes("Abraham lincoln", "Whatever you are be a good one", new Date(2012,12,1)),
+  new Quotes("Albert Einstein", "If you want to live a happy life,tie to a goal,not to people or objects",new Date(2013,11,5)),
+  new Quotes("Ben Carson", "Uninformed people can be easily manipulated",new Date(2012,12,2)),
+  new Quotes("Gitonga Miriam","Work hard Untill your Bank Account balance looks like your mobile phone number",new Date(2012,3,2)),
+  new Quotes("Nick Vijucic","If i fail ,i try again ,and again",new Date(2012,12,1)),
+  new Quotes("Oprah Winfrey","Think like a Queen .A Queen is not afraid to fail to failure is another steppingstone to greatness",new Date(2012,12,8)),
   
 ];
-addNewQoute(qoute){
-  qoute.completeDate = new Date(qoute.completeDate)
-  this.qoutes.push(qoute)
+addNewQuote(quote){
+  quote.completeDate = new Date(quote.completeDate)
+  this.quotes.push(quote)
 }
 displayDetails(index){
-  this.qoutes[index].showQuotes = !this.qoutes[index].showQuotes;
+  this.quotes[index].showQuotes = !this.quotes[index].showQuotes;
 }
-deleteQoute(isComplete, index){
+deleteQuote(isComplete, index){
   if (isComplete) {
-    let toDelete=confirm('Are you sure you want to delete'+ this.qoutes[index] .saying + '?')
+    let toDelete=confirm('Are you sure you want to delete'+ this.quotes[index] .saying + '?')
   
   if(toDelete){
-    this.qoutes.splice(index,1)
+    this.quotes.splice(index,1)
   }
   }
 
@@ -39,15 +40,16 @@ deleteQoute(isComplete, index){
 }
 
 addUpVotes(i){
-  this.qoutes[i].upVotes+=1;
+  this.quotes[i].upVotes+=1;
 }
 addDownVotes(i){
-  this.qoutes[i].downVotes+=1;
+  this.quotes[i].downVotes+=1;
 }
+  
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
