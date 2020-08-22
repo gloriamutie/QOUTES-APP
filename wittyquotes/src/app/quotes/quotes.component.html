@@ -1,1 +1,51 @@
-<p>quotes works!</p>
+
+  <head></head>
+  <body>
+    <h1>WITTY QUOTES</h1>
+    <hr/>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor="let qoute of qoutes; let i = index">
+          <div class="card" id="cla">
+            {{ qoute.saying }}
+            <br>
+            {{ qoute.name }}
+
+
+            <ul>
+              <button (click)="addUpVotes(i)">
+                <i class="fas fa-heart"></i>
+              </button>
+              {{
+                qoute.upVotes
+              }}
+
+              <button (click)="addDownVotes(i)">
+                <i class="fas fa-heart"></i>
+              </button>
+              {{
+                qoute.downVotes
+              }}
+            </ul>
+            <button (click)="displayDetails(i)" class="bt btn-outline-dark">
+              display
+            </button>
+          </div>
+          <br />
+          <div>
+            <app-qoutes-detail
+              *ngIf="qoute.showQuotes"
+              [qoute]="qoute"
+              (isComplete)="deleteQoute($event, i)"
+            ></app-qoutes-detail>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-qoute-form (AddQoute)="addNewQoute($event)"></app-qoute-form>
+      </div>
+  
+    </div>
+  </body>
+
+

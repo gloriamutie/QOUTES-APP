@@ -1,1 +1,5 @@
-<p>quote-detail works!</p>
+<p>posted on {{qoute.complete | date}}</p>
+<p>{{qoute.complete |amTimeAgo|lowercase}}</p>
+<button (click)= 'qouteDelete(true)' class="btn btn-outline-dark">Delete qoute</button><br><br>
+
+
