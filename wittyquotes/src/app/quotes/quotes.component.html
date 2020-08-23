@@ -1,10 +1,12 @@
-<head></head>
+
 
 <body>
-  <h1>WITTY QUOTES</h1>
-  <hr />
+  <hr>
+  
+  <div class="jumbotron " style="background-color:rgb(54, 52, 52);">
+    <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div *ngFor="let quote of quotes; let i = index">
         <div class="card" id="cla">
           {{ quote.saying }}
@@ -38,9 +40,11 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <app-quote-form (AddQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-
   </div>
+    </div>
+  </div>
+
 </body>

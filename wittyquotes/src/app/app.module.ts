@@ -11,6 +11,7 @@ import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     HighlightDirective,
     DateCountPipe,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
