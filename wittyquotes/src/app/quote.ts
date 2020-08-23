@@ -6,7 +6,6 @@ export class Quotes {
 
     constructor(public name:string,public saying:string,public complete:Date)
        { 
-      this.showQuotes=false;
       this.upVotes=0;
       this.downVotes=0;
       

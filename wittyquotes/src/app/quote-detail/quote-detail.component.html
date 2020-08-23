@@ -1,5 +1,7 @@
-<p>posted on {{quote.complete | date}}</p>
-<p>{{quote.complete |amTimeAgo|lowercase}}</p>
+<p>posted on {{quote.complete| date}}</p>
+<p>{{quote.complete|dateCount}} day(s) ago</p>
+
+
 <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button><br><br>
 
 

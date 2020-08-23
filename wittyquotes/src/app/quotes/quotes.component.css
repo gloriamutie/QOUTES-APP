@@ -10,12 +10,13 @@ h1{
     color:rgb(175, 17, 17);
     font-family:Italic;
 }
+/*
 body{
     background-color: slategrey;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+*/
 #cla{
     background-color: blue;
 }

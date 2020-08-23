@@ -1,7 +1,8 @@
 <head></head>
+
 <body>
   <h1>WITTY QUOTES</h1>
-  <hr/>
+  <hr />
   <div class="row">
     <div class="col-md-6">
       <div *ngFor="let quote of quotes; let i = index">
@@ -26,17 +27,14 @@
               quote.downVotes
             }}
           </ul>
-          <button (click)="displayDetails(index)" class="bt btn-outline-dark">
+          <button (click)="displayDetails(i)" class="bt btn-outline-dark">
             display
           </button>
         </div>
         <br />
         <div>
-          <app-quote-detail
-            *ngIf="quote.showQuotes"
-            [quote]="quote"
-            (isComplete)="deleteQuote($event, i)"
-          ></app-quote-detail>
+          <app-quote-detail *ngIf="quote.showQuotes" [quote]="quote" (isComplete)="deleteQuote($event, i)">
+          </app-quote-detail>
         </div>
       </div>
     </div>
@@ -46,4 +44,3 @@
 
   </div>
 </body>
-

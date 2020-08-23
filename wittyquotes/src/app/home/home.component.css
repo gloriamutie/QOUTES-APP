@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  /*background: linear-gradient(to bottom right, darkslategrey, black);*/
+  /*background-color: rgba(34, 9, 43, 0.3);*/
+  background-image: url("/wittyquotes/src/assets/Soothing-nature-backgrounds-2.jpg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.overlay {
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-text {
+  position: relative;
+  font-size: 70px;
+  color: darkgoldenrod;
+  font-family: 'Cabin Sketch', cursive;
+}
