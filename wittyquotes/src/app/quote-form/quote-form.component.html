@@ -1,46 +1,26 @@
 <div id='mine'>
-    <h2>Add Quote</h2>
+  <h2>Add Quote</h2>
+</div>
+<form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
+  <div class="form-group">
+    <label for="name">Author</label>
+    <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"
+      required>
+
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <p>Author is required</p>
     </div>
-    <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
-      <div class="form-group">
-        <label for="name">Author</label>
-        <input
 
-          type="text"
-          required
-          class="form-control"
-          id="name"
-          [(ngModel)]="newQuote.name"
-          name="name"
-          #name="ngModel"
-          required
-          placeholder="Author" 
-        >
-        
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          <p>Author is required</p>
-        </div>
+  </div>
+  <div class="form-group">
+    <label for="saying">Quote</label>
+    <input type="text" required class="form-control" id="saying" [(ngModel)]="newQuote.saying" name="saying"
+      #saying="ngModel" required>
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <p>Quote is required</p>
 
-      </div>
-      <div class="form-group">
-        <label for="saying">Quote</label>
-        <input
-          type="text"
-          required
-          class="form-control"
-          id="saying"
-          [(ngModel)]="newQuote.saying"
-          name="saying"
-          #saying="ngModel"
-          required
-          placeholder="Quote" 
-        >
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          <p>Quote is required</p>
-          
-          
-        </div>
-        <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
-       </div>
-    </form>
-  
+
+    </div>
+    <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
+  </div>
+</form>

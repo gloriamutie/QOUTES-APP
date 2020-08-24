@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap');
 
 .navbar {
-    background-color:transparent;
-    position: -webkit-sticky;
+    background-color:teal;
+    position: sticky;
     
     z-index: 1;
     top: 0;
     left: 0;
     right: 0;
-    height:30px;
-    padding-bottom: -20px;
-   ;
+    height:10vh;
+    padding-bottom: -10px;
+    margin-bottom: 10vh;
+    opacity:10;
+
+   
 }
 
 .brand {
     font-family: 'Cabin Sketch', cursive;
     font-size: 35px;
-    color: teal;
+    color:whitesmoke;
 }

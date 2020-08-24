@@ -16,14 +16,3 @@
   background-attachment: fixed;
 }
 
-.overlay {
-  height: inherit;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.header-text {
-  position: relative;
-  font-size: 70px;
-  color: darkgoldenrod;
-  font-family: 'Cabin Sketch', cursive;
-}
